@@ -1,0 +1,36 @@
+.header {
+    text-align: center;
+    
+}
+
+
+.slider {
+
+    position: relative;
+    height: 100vh;
+    display:flex;
+    align-items:center; 
+    justify-content: center;
+}
+
+.image {
+    height: 600px;
+    width: 1000px;
+    border-radius: 10px;
+}
+
+.right-arrow {
+    position: absolute;
+    top:50%;
+    right: 120px;
+    font-size: 100px;
+    color: black;
+}
+
+.left-arrow {
+    position: absolute;
+    top:50%;
+    left: 120px;
+    font-size: 100px;
+    color: black;
+}

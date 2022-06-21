@@ -1,20 +1,30 @@
 import React, { useState } from "react";
+import {useNavigate} from "react-router-dom"
 //import Dropdown from "../components/Dropdownmenu/Dropdown.js";
 import "../App.css";
+import "./menu.css"
 
 //import OptionList from "../components/Dropdown2/OptionList/OptionList.js";
 import { menuItems } from "../components/Dropdown2/Weeks.js";
 //import MenuItems from "../components/Dropdown2/MenuItems.js";
-
 export default function Menu() {
 
-  const [selected, setSelected] = useState("");
-  
+  const [selected, setSelected] = useState([]);
+  const [indexItems, setIndexItems] = useState(0)
+
   const HandleChange = (event) => {
-         console.log(event.target.value);
+  console.log(event.target.value);
   setSelected(event.target.value)
+  setIndexItems(1)
   // 
   }
+  const navigate = useNavigate();
+
+  const navigateToResources = () => {
+    // 👇️ navigate to /contacts
+    navigate('/resources');
+  };
+
   return (
     <div>
       <h1> School of Code </h1>
@@ -26,15 +36,19 @@ export default function Menu() {
       <h2> Recap Resources</h2>
       <p id="select_week">Select week:</p>
      
-      <select onChange={HandleChange} >
-        {menuItems.map((items, index) => (
+      <select className="select-button" onChange={HandleChange} >
+        {menuItems.map((weeks, index) => (
           <option key={index} >
-            {items.week}
+            {weeks.week}
           </option>
         ))}
       </select>
-      <p>{selected}</p>
-      
+<div>
+      <button onClick={navigateToResources}>{menuItems[indexItems].days[0].day}</button>
+      <button>{menuItems[indexItems].days[1].day}</button>
+      <button>{menuItems[indexItems].days[2].day}</button>
+      <button>{menuItems[indexItems].days[3].day}</button>
+</div>
     </div>
   );
 }
