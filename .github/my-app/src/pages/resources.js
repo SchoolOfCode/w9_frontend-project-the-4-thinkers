@@ -1,5 +1,7 @@
 import React from "react";
 import Comment from "../components/comments/addComments";
+import ImageSlider from "../components/imageslider/imageslider";
+import { SliderData } from "../components/imageslider/sliderdata";
 // title 
 // images with sliders 
 // box with Lorem ipsum text
@@ -14,7 +16,8 @@ export default function Resources() {
   return (
     <div>
       <h1> School of Code resources </h1>
-     <Comment />
+      <Comment />
+     <ImageSlider slides={SliderData}/>
       </div>
  );
 }
