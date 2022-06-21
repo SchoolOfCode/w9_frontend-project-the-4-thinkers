@@ -15,6 +15,6 @@ export default function Resources() {
     <div>
       <h1> School of Code resources </h1>
      <Comment />
-    </div>
-  );
+      </div>
+ );
 }
