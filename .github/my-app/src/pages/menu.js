@@ -33,12 +33,12 @@ export default function Menu() {
   return (
     <div>
       <h1> School of Code </h1>
-      <h2> Recap Resources</h2>
       <img
         src="https://d33wubrfki0l68.cloudfront.net/e6fddcbea146f91d2f3c160f7d56a9391a4740b0/4e758/static/logo-51c754388b198e5bbb0d08a971ebbfa2.png"
         alt="school of code logo"
         id="logo"
       />
+      <h2> Recap Resources</h2>
       <p id="select_week">Select week:</p>
       <Dropdown
         formLabel="Choose a week"
