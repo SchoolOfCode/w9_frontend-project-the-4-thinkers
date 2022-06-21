@@ -13,7 +13,7 @@ import Comment from "../components/comments/addComments";
 export default function Resources() {
   return (
     <div>
-      <h1> School of Code resources (Zainab) </h1>
+      <h1> School of Code resources </h1>
      <Comment />
     </div>
   );
