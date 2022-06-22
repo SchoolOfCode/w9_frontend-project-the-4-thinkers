@@ -9,9 +9,11 @@ import CheckBoxComponent from "../components/checkbox/checkboxcomp";
 import CommentList from "../components/comments/commentlist";
 //import { Dropdown } from "";
 import { useState,useEffect } from "react";
+import CommentForm from "../components/comments/commentform";
 
   
 export default function Resources() {
+    const [dataQ, setDataQ] = useState("");
     const [commentListx, setCommentListx]=useState([]);
     useEffect(function(){
         async function getComments (){
@@ -22,7 +24,26 @@ export default function Resources() {
         setCommentListx(data)
         }
         getComments();
-    },[commentListx]);
+    },[dataQ]);
+    
+    async function handleSubmit (e,cFV) {
+        console.log(cFV);
+        e.preventDefault();
+        let responseP = await fetch('http://localhost:3000/page/1', {
+            method:'POST',
+            //mode:'cors',
+            headers: {
+                'Content-Type': 'application/json',
+                },
+            body: JSON.stringify({
+                user_id:1, 
+                comment_id:5, 
+                comment_text: cFV,
+            }),
+        });
+        let dataP = responseP.json();	
+        setDataQ(dataP);
+    }
     
     return (
         <div>
@@ -30,6 +51,7 @@ export default function Resources() {
             <ImageSlider />
             <SummaryBox className="summary-box"/>
             <CheckBoxComponent />
+            <CommentForm onSubmit={handleSubmit}  />
             <CommentList commentListx={commentListx}/>
 
         </div>
