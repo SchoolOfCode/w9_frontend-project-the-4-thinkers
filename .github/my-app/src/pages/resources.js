@@ -13,9 +13,9 @@ import { useState } from "react";
   
 export default function Resources() {
     const [commentListx, setCommentListx]=useState([]);
+   console.log("hello")
     
     useEffect(()=> {
-        
         const getComments = async () => {
         const response = await fetch('http://localhost:3000/page/1')
         console.log("This is the response:", response);
@@ -24,7 +24,7 @@ export default function Resources() {
         setCommentListx(data)
         };
         getComments();
-    }, [commentListx]);
+    }, []);
 
     return (
         <div>

@@ -1,29 +1,40 @@
-import React, { useState } from "react";
-import {useNavigate} from "react-router-dom"
+import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import "../../App.css";
-import "./menu.css"
+import "./menu.css";
 
 //import OptionList from "../components/Dropdown2/OptionList/OptionList.js";
 import { menuItems } from "../../components/Dropdown2/Weeks";
 //import MenuItems from "../components/Dropdown2/MenuItems.js";
 export default function Menu() {
+  const [selected, setSelected] = useState("");
+  const [indexItems, setIndexItems] = useState(0);
 
-  const [selected, setSelected] = useState([]);
-  const [indexItems, setIndexItems] = useState(0)
-
+  //console.log("hello")
   const HandleChange = (event) => {
-  console.log(event.target.value);
-  setSelected(event.target.value)
-  setIndexItems(1)
-  // 
-  }
+    console.log(event.target.value);
+    
+    setSelected(event.target.value);
+  };
+ 
+
+  useEffect(()=>{
+
+    if(selected==="Week 1"){setIndexItems(0)}
+    else if(selected==="Week 2"){setIndexItems(1)}
+    else if(selected==="Week 3"){setIndexItems(2)}
+
+  },[selected])
   const navigate = useNavigate();
 
-  const navigateToResources = () => {
-    // 👇️ navigate to /contacts
-    navigate('/resources');
+  const navigateToResources = (res) => {
+    // console.log(res);
+    navigate(`/resources/${res}`);
   };
+
+  // console.log("no",indexItems)
+  // console.log("yes",menuItems[indexItems].days[0]);
 
   return (
     <div>
@@ -35,25 +46,33 @@ export default function Menu() {
       />
       <h2> Recap Resources</h2>
       <p id="select_week">Select week:</p>
-     
-      <select className="select-button" onChange={HandleChange} >
+
+      <select className="select-button" onChange={HandleChange}>
         {menuItems.map((weeks, index) => (
-          <option key={index} >
-            {weeks.week}
-          </option>
+          <option key={index}>{weeks.week}</option>
         ))}
       </select>
-<div>
-      <button onClick={navigateToResources}>{menuItems[indexItems].days[0].day}</button>
-      <button>{menuItems[indexItems].days[1].day}</button>
-      <button>{menuItems[indexItems].days[2].day}</button>
-      <button>{menuItems[indexItems].days[3].day}</button>
-</div>
+
+      <div className="button-group">
+        <p className="btn">
+          {/* {selected && menuItems[indexItems] */}
+          {menuItems[indexItems].days.map((item,index)=>{return(<button onClick={()=>{navigateToResources(item.day)}} key={index}>{item.day}</button>)})}
+        </p>
+        
+      </div>
+
     </div>
   );
 }
 
-
+{
+  /* <div className="button-group">
+      <button className="btn" onClick={navigateToResources} >{menuItems[indexItems].days[0].day}</button>
+      <button className="btn" >{menuItems[indexItems].days[1].day}</button>
+      <button className="btn" >{menuItems[indexItems].days[2].day}</button>
+      <button className="btn" >{menuItems[indexItems].days[3].day}</button>
+</div> */
+}
 
 // const Menu = () => {
 //   const [selected, setSelected] = useState("");

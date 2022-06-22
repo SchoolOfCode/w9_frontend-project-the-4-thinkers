@@ -18,6 +18,7 @@ export const menuItems = [
       },
     ],
   },
+  
   {
     week: "Week 2",
     days: [
