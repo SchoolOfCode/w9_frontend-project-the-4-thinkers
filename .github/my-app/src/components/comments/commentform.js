@@ -7,7 +7,7 @@ export default function CommentForm({onSubmit}) {
     
     function changeCommentFieldValue(e) {
         setCommentFieldValue(e.target.value)
-    }
+    };
     
 
     return (
@@ -18,9 +18,9 @@ export default function CommentForm({onSubmit}) {
                 value="Submit" 
                 onClick={function(e){
                     onSubmit(e,commentFieldValue)}
-                    }>
+                }>
 
             </input>
         </form>
   );
-}
+};

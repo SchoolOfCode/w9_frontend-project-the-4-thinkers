@@ -18,13 +18,13 @@ export default function Resources() {
     useEffect(function(){
         async function getComments (){
         const response = await fetch('http://localhost:3000/page/1')
-        console.log("This is the response:", response);
+            //console.log("This is the response:", response);
         const data = await response.json();
-        console.log("And this is the data: ", data);
+            //console.log("And this is the data: ", data);
         setCommentListx(data)
         }
         getComments();
-    },[dataQ]);
+    }, [dataQ]);
     
     async function handleSubmit (e,cFV) {
         console.log(cFV);
@@ -43,7 +43,7 @@ export default function Resources() {
         });
         let dataP = responseP.json();	
         setDataQ(dataP);
-    }
+    };
     
     return (
         <div>
@@ -56,4 +56,4 @@ export default function Resources() {
 
         </div>
     );
-}
+};
