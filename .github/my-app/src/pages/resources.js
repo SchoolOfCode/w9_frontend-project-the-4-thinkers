@@ -13,15 +13,16 @@ import { useState,useEffect } from "react";
   
 export default function Resources() {
     const [commentListx, setCommentListx]=useState([]);
-    useEffect(function(){async function getComments (){
+    useEffect(function(){
+        async function getComments (){
         const response = await fetch('http://localhost:3000/page/1')
         console.log("This is the response:", response);
         const data = await response.json();
         console.log("And this is the data: ", data);
         setCommentListx(data)
-    }
-    getComments();
-    },[commentListx])
+        }
+        getComments();
+    },[commentListx]);
     
     return (
         <div>
