@@ -3,7 +3,7 @@
 // create a button 
 // create a handle click which displays a message 
 
-import Comment from "../components/comments/addComments"
+import Comment from "../components/comments/comment"
 export default function Login(){
     return (
         <>

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 import {useNavigate} from "react-router-dom"
-//import Dropdown from "../components/Dropdownmenu/Dropdown.js";
-import "../App.css";
+
+import "../../App.css";
 import "./menu.css"
 
 //import OptionList from "../components/Dropdown2/OptionList/OptionList.js";
-import { menuItems } from "../components/Dropdown2/Weeks.js";
+import { menuItems } from "../../components/Dropdown2/Weeks";
 //import MenuItems from "../components/Dropdown2/MenuItems.js";
 export default function Menu() {
 

@@ -1,6 +1,6 @@
 import React from "react"
 import Login from "./pages/login"
-import Menu from "./pages/menu";
+import Menu from "./pages/menu/menu.js";
 import Resources from "./pages/resources";
 import './App.css';
 import { Route, Routes} from "react-router-dom"
