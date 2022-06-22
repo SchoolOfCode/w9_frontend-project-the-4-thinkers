@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 //import Comment from "../components/comments/comment";
 import ImageSlider from "../components/imageslider/imageslider";
 //import { SliderData } from "../components/imageslider/sliderdata";
@@ -13,15 +13,16 @@ import { useState,useEffect } from "react";
   
 export default function Resources() {
     const [commentListx, setCommentListx]=useState([]);
-    
-    useEffect(async function getComments (){
+    useEffect(function(){async function getComments (){
         const response = await fetch('http://localhost:3000/page/1')
         console.log("This is the response:", response);
         const data = await response.json();
         console.log("And this is the data: ", data);
         setCommentListx(data)
-    },[commentListx])
+    }
     getComments();
+    },[commentListx])
+    
     return (
         <div>
             <h1 className="resources-heading"> School of Code resources </h1>
