@@ -1,17 +1,15 @@
 import React from "react";
 import Comment from "./comment.js";
 //import { Dropdown } from "";
-
-export default function CommentList({responseArray}) {
-    console.log(responseArray);
-    //let commentArray=response.payload;
-    //console.log(commentArray);
+export default function CommentList({commentListx}) {
     return (
         <>
-        {responseArray.map((comment)=>(
-            <Comment text={comment.comment_text}/>
-        )
-        )}
+        {commentListx.map(function(comment){
+            console.log("map function called");
+            return(
+                <Comment text={comment.comment_text}/>
+            )
+        })}
         </>
-    )
+    );
 }

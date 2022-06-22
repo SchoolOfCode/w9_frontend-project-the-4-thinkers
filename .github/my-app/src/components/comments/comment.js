@@ -4,9 +4,8 @@ import React from "react";
 export default function Comment({text}) {
   return (
     <div>
-    <h1>person1</h1>
-      <p>{text}</p>
-     
+        <h1>person1</h1>
+        <p>{text}</p>
     </div>
   );
 }
