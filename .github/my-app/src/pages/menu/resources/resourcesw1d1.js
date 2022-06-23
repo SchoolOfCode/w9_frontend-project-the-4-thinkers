@@ -5,7 +5,6 @@ import ImageSlider from "../../../components/imageslider/imageslider.js";
 import SummaryBox from "../../../components/summarybox/summarybox.js";
 import "./resources.css";
 import CheckBoxComponent from "../../../components/checkbox/checkboxcomp";
-//import CommentForm from "../components/comments/commentform";
 import CommentList from "../../../components/comments/commentlist.js";
 //import { Dropdown } from "";
 import { useState,useEffect } from "react";
@@ -18,7 +17,9 @@ export default function Resources() {
     const [dataE, setDataE] = useState("");
     const [commentListx, setCommentListx]=useState([]);
     useEffect(function(){
+        console.log("useEffect called")
         async function getComments (){
+            console.log("getComments called")
         const response = await fetch('http://localhost:3000/page/1')
             //console.log("This is the response:", response);
         const data = await response.json();
@@ -29,6 +30,7 @@ export default function Resources() {
     }, [dataQ,dataE]);
     
     async function handleSubmit (e,text) {
+        console.log("handleSubmit called")
         console.log(text);
         e.preventDefault();
         let responseP = await fetch('http://localhost:3000/page/1', {
@@ -66,7 +68,7 @@ export default function Resources() {
     return (
         <div>
             <h1 className="resources-heading"> School of Code resources </h1>
-            <BackToHomeButton/>
+            <BackToHomeButton></BackToHomeButton>
             <ImageSlider />
             <SummaryBox className="summary-box"/>
             <CheckBoxComponent />

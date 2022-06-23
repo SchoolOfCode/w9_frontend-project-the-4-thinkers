@@ -7,14 +7,23 @@ export default function CommentForm({onSubmit}) {
         setCommentFieldValue(e.target.value)
     };
     return (
-        <form>
-            <input onChange={changeCommentFieldValue}></input>
+        <form 
+            onSubmit={function(e){
+                e.preventDefault();
+                    if (commentFieldValue){
+                        onSubmit(e,commentFieldValue);
+                        console.log("onSubmit called>>>>>>>");
+                        setCommentFieldValue("");
+                    }
+                    else {
+                        console.log("Please input a comment!")
+                    }
+            }} >
+            <input value={commentFieldValue} onChange={changeCommentFieldValue}></input>
             <input 
                 type="submit" 
                 value="Submit" 
-                onClick={function(e){
-                onSubmit(e,commentFieldValue)}
-                }>
+                >
             </input>
         </form>
   );
