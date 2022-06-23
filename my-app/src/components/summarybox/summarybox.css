@@ -1,0 +1,19 @@
+.summary-box {
+  margin: auto;
+  width: 70%;
+  border: 3px solid green;
+  padding: 10px;
+  background-color: #A7DCC6;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  
+}
+
+.title {
+  text-align: center;
+}
+
+.lists {
+  text-align: center;
+  border: 3px solid green;
+}

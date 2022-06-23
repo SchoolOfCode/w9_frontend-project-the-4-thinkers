@@ -1,0 +1,11 @@
+.home-button-icon{
+    position: sticky;
+    font-size: 100px;
+    color: #33A5DE;
+    margin-left: 170px;
+    
+}
+.home-button-icon:hover, 
+.home-button-icon:focus {
+    background-color: lightblue;
+}
