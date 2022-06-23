@@ -1,12 +1,17 @@
 .checkbox{
     color: black;
+    background-color: #A7DCC6;
     position: relative;
     text-align: center;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     font-size: 20px;
-   
+   padding-top: 10px;
+   padding-bottom: 10px;
+   margin-left: 650px;
+   margin-right: 650px;
+   border-radius: 10px;
 }
 
 .App{
-    color: blue;
+    color: #79B9D4;
 }
