@@ -26,9 +26,7 @@ export default function ImageSlider() {
     <>
 
       <h2 className="sub-heading"> Slides and Summary information</h2>
-      <section className="slider">
-        <LeftArrow className="left-arrow" onClick={prevSlide} />
-        <RightArrow className="right-arrow" onClick={nextSlide} />
+      <section >
 
         {SliderData.map((slide, index) => {
           return (
@@ -40,6 +38,8 @@ export default function ImageSlider() {
           );
         })}
       </section>
+        <LeftArrow className="icon-left-arrow" onClick={prevSlide} />
+        <RightArrow className="icon-right-arrow" onClick={nextSlide} />
     </>
   );
 }

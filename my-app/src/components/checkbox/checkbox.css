@@ -8,15 +8,17 @@
 
 
 
-.checkbox{
-    color: black;
+
+.checkbox-ticker {
+  font-size: 20px;
+  background-color: #6FB6DA;
+  color: black;
     text-align: center;
-    margin-left: 70px;
-    margin-right: 70px;
+    margin: auto;
+    width: 10%;
+    padding: 15px 15px 15px 15px;
     font-family: var( --main-font);
     font-size: 20px;
-    width: 80%;
-
-   
+    border-radius: 15px;
 }
 

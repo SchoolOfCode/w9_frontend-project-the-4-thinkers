@@ -3,17 +3,17 @@ import Checkbox from "./checkbox";
 import "./checkbox.css"
 
 function CheckBoxComponent() {
+  
   const [checked, setChecked] = useState(false);
   const onChange = () => {
     setChecked(!checked);
   };
   return (
-    <div className="App">
-      <Checkbox 
-        id="checkbox" 
-        label="Completed" 
+    <div >
+      <Checkbox className="checkbox-ticker"
         value={checked} 
         onChange={onChange} 
+        label="Section Reviewed" 
       />      
     </div>
   );

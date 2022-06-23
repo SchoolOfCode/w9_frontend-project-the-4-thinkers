@@ -10,13 +10,13 @@
 
 
 .home-button-icon{
-    position: sticky;
-    font-size: 100px;
-    color: var(--main-color-blue);
-    margin-left: 170px;
-    
+    font-size: 70px;
+    margin: auto;
+    width: 100%;
+    color: var(--lighter-blue);
 }
+
 .home-button-icon:hover, 
 .home-button-icon:focus {
-    color: var(--lighter-blue);
+    color: lightblue;
 }

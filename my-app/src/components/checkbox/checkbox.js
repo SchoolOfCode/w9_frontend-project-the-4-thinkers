@@ -1,15 +1,15 @@
 import "./checkbox.css"
 
-const Checkbox = ({ id, label, value, onChange }) => {
+const Checkbox = ({ label, value, onChange }) => {
     return (
-      <div className="checkbox">
+      <div className="checkbox-ticker">
         <input 
-          id={id} 
+           
           type="checkbox" 
           checked={value} 
           onChange={onChange} 
         />
-        <label htmlFor={id}>{label}</label>
+        <label >{label}</label>
       </div>
     );
   };
