@@ -14,6 +14,7 @@ import CommentForm from "../components/comments/commentform";
   
 export default function Resources() {
     const [dataQ, setDataQ] = useState("");
+    const [dataE, setDataE] = useState("");
     const [commentListx, setCommentListx]=useState([]);
     useEffect(function(){
         async function getComments (){
@@ -24,10 +25,10 @@ export default function Resources() {
         setCommentListx(data)
         }
         getComments();
-    }, [dataQ]);
+    }, [dataQ,dataE]);
     
-    async function handleSubmit (e,cFV) {
-        console.log(cFV);
+    async function handleSubmit (e,text) {
+        console.log(text);
         e.preventDefault();
         let responseP = await fetch('http://localhost:3000/page/1', {
             method:'POST',
@@ -38,13 +39,29 @@ export default function Resources() {
             body: JSON.stringify({
                 user_id:1, 
                 comment_id:5, 
-                comment_text: cFV,
+                comment_text: text,
             }),
         });
         let dataP = responseP.json();	
         setDataQ(dataP);
     };
     
+    async function handleDelete (e,commentId) {
+        console.log(commentId);
+        e.preventDefault();
+        let responseD = await fetch('http://localhost:3000/page/1', {
+            method:'DELETE',
+            headers: {
+                'Content-Type': 'application/json',
+                },
+            body: JSON.stringify({
+                comment_id:commentId, 
+            }),
+        });
+        let dataD = responseD.json();
+        setDataE(dataD);
+    }
+        
     return (
         <div>
             <h1 className="resources-heading"> School of Code resources </h1>
@@ -52,7 +69,7 @@ export default function Resources() {
             <SummaryBox className="summary-box"/>
             <CheckBoxComponent />
             <CommentForm onSubmit={handleSubmit}  />
-            <CommentList commentListx={commentListx}/>
+            <CommentList commentListx={commentListx} handleDelete={handleDelete}/>
 
         </div>
     );
