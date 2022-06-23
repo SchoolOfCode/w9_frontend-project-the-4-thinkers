@@ -11,6 +11,7 @@ import CommentList from "../../../components/comments/commentlist";
 import { useState, useEffect } from "react";
 import CommentForm from "../../../components/comments/commentform";
 import "./resources.css"
+import BackToHomeButton from "../../../components/backtomenu/backtohome";
 
 export default function Resources() {
   const [dataQ, setDataQ] = useState("");
@@ -49,8 +50,9 @@ export default function Resources() {
   }
 
   return (
-    <div>
+    <div className="body">
       <h1 className="resources-heading"> School of Code resources </h1>
+      <BackToHomeButton/>
       <ImageSlider />
       <SummaryBox className="summary-box" />
       <CheckBoxComponent className="checkbox"/>

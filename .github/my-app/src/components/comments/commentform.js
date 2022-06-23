@@ -17,7 +17,7 @@ export default function CommentForm({onSubmit}) {
                 type="submit" 
                 value="Submit" 
                 onClick={function(e){
-                    onSubmit(e,commentFieldValue)}
+                onSubmit(e,commentFieldValue)}
                 }>
 
             </input>
