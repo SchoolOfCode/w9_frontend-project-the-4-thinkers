@@ -11,28 +11,28 @@ export const menuItems = [
         day: "Day2",
       },
       {
-        day: "Day 3",
+        day: "Day3",
       },
       {
-        day: "Day 4",
+        day: "Day4",
       },
     ],
   },
-  
+
   {
     week: "Week 2",
     days: [
       {
-        day: "W2Day 1",
+        day: "W2Day1",
       },
       {
-        day: "W2Day 2",
+        day: "W2Day2",
       },
       {
-        day: "W2Day 3",
+        day: "W2Day3",
       },
       {
-        day: "W2Day 4",
+        day: "W2Day4",
       },
     ],
   },
@@ -40,21 +40,20 @@ export const menuItems = [
     week: "Week 3",
     days: [
       {
-        day: "W3Day 1",
+        day: "W3Day1",
       },
       {
-        day: "W3Day 2",
+        day: "W3Day2",
       },
       {
-        day: "W3Day 3",
+        day: "W3Day3",
       },
       {
-        day: "W3Day 4",
+        day: "W3Day4",
       },
     ],
-  }
+  },
 ];
-
 
 //   {
 //     week: “Week 3”,
