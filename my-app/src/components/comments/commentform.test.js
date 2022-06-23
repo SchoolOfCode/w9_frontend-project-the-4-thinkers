@@ -2,6 +2,7 @@ import {render,screen} from "@testing-library/react";
 import {test,expect} from "@jest/globals";
 import userEvent from "@testing-library/user-event"
 import commentform from "./commentform";
+import CommentForm from "./commentform";
 
 describe("Comment form functionality", function(){
 
@@ -14,7 +15,7 @@ describe("Comment form functionality", function(){
     test("Text content of comment should be the value of Text prop", function(){
         const handleDelete = jest.fn()
         const text="Test Comment"
-        render (<Comment text={text} onClick={handleDelete} cId={cId} />);
+        render (<CommentForm text={text} onClick={handleDelete} cId={cId} />);
         expect(screen.getByRole("button")).toHaveTextContent(text);
     })
 });
