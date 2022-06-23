@@ -3,7 +3,6 @@ import React from "react"
 import Menu from "./pages/menu/menu/menu.js";
 import Resources from "./pages/menu/resources/resourcesw1d1";
 //mport HomePage from "./pages/HomePage";
-import './App.css';
 import { Route, Routes} from "react-router-dom"
 
 
