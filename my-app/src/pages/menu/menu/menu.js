@@ -43,14 +43,14 @@ export default function Menu() {
         id="logo"
       />
       <h2> Recap Resources</h2>
-      <p id="select_week">Select week:</p>
-
-      <select className="select-button" onChange={HandleChange}>
-        {menuItems.map((weeks, index) => (
-          <option key={index}>{weeks.week}</option>
-        ))}
-      </select>
-
+      <div id="select_area">
+        <p id="select_week">Select week:</p>
+        <select className="select-button" onChange={HandleChange}>
+          {menuItems.map((weeks, index) => (
+            <option key={index}>{weeks.week}</option>
+          ))}
+        </select>
+      </div>
       <div className="button-group">
         <p className="btn">
           {/* {selected && menuItems[indexItems] */}
