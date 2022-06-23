@@ -47,6 +47,11 @@
     color: var(--lighter-blue);
 }
 
+.right-arrow:hover, 
+.right-arrow:focus {
+    color: var(--main-color-blue);
+}
+
 .left-arrow {
     position: absolute;
     margin-left: 100px;
@@ -56,3 +61,7 @@
     color: var(--lighter-blue);
 }
 
+.left-arrow:hover, 
+.left-arrow:focus {
+    color: var(--main-color-blue);
+}
