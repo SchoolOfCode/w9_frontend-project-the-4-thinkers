@@ -1,10 +1,20 @@
 
 
+  :root {
+    --main-color-blue: #31A4DD: ;
+    --lighter-blue: #6FB6DA;
+    --lightest-blue:#D5EFF7;
+    --main-font:roboto Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+
   .resources-heading{
-    
+    margin-top: 50px;
     text-align: center;
+    font-family:var(--main-font);
+    font-size: 30px;
   }
 
   .body {
-      background-color: mintcream;
+      background-color: white;
   }

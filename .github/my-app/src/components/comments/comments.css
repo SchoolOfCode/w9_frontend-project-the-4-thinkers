@@ -1,14 +1,25 @@
+:root {
+    --main-color-blue: #31A4DD: ;
+    --lighter-blue: #6FB6DA;
+    --lightest-blue:#D5EFF7;
+    --main-font:roboto Verdana, Geneva, Tahoma, sans-serif;
+    --padding-elements: 20px;
+  }
+
+
+
 .comments {
     margin: auto;
-    width: 50%;
-    border: 3px solid green;
-    margin-bottom: 30px;
-    margin-top: 30px;
+    width: 30%;
+    border: 3px solid #31A4DD;
+    border-radius: 20px;
+    margin-bottom: 60px;
+    margin-top: 60px;
     padding: 0px;  
   }
     
   .comments-title {
-      text-align: center;
+    text-align: center;
     font-size: 30px;
     margin-bottom: 20px;
   }
@@ -16,7 +27,8 @@
   .comment-form-title {
     font-size: 22px;
     text-align: center;
-    color: blue;
+    color: black;
+    font-family: var(--main-font);
   }
   
   .input-field {
@@ -27,7 +39,8 @@
     margin: auto;
     width: 70%;
     padding: 20px;
-    background-color: #A7DCC6;
+    background-color: var(--lightest-blue);
+    margin-bottom: 50px;
     
   }
   
@@ -46,10 +59,10 @@
   }
   
   .comment-delete-button {
-margin-top: 15px;
-margin-bottom: 15px;
-margin-left: 30px;
-font-size: 10px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 30px;
+    font-size: 10px;
     padding: 4px 5px;
     background: rgb(59, 130, 246);
     border-radius: 5px;
@@ -64,38 +77,34 @@ font-size: 10px;
   .comment {
     display: flex;
     margin-bottom: 30px;
-    background-color: blueviolet;
+    background-color: var(--lighter-blue);
   }
   
   
   
   .comment-content {
     display: flex;
-    color: red;
+    color: black;
+    margin-top: 30px;
+    background-color: #6FB6DA;
+    font-family: var(--main-font);
   }
   
   .comment-author {
-    margin-right: 8px;
-    font-size: 20px;
-    color: rgb(59, 130, 246);
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: black;
+    font-family: var(--main-font);
   }
   
   .comment-text {
     font-size: 18px;
+    margin-left: 20px;
+    background-color: #6FB6DA;
   }
   
-  .comment-actions {
-    display: flex;
-    font-size: 12px;
-    color: rgb(51, 51, 51);
-    cursor: pointer;
-    
-  }
+
   
-  .comment-action {
-    margin-right: 8px;
-  }
   
-  .comment-action:hover {
-    text-decoration: underline;
-  }

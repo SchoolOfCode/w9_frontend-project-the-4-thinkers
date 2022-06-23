@@ -67,7 +67,7 @@ export default function Resources() {
         
     return (
         <div className="body">
-            <h1 className="resources-heading"> School of Code resources </h1>
+             <h1 className="resources-heading">Week 1 Day 1 Study Materials</h1>
             <BackToHomeButton></BackToHomeButton>
             <ImageSlider />
             <SummaryBox className="summary-box"/>

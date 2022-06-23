@@ -24,7 +24,8 @@ export default function ImageSlider() {
 
   return (
     <>
-      <h1 className="header" >Important points from the lecture</h1>
+
+      <h2 className="sub-heading"> Slides and Summary information</h2>
       <section className="slider">
         <LeftArrow className="left-arrow" onClick={prevSlide} />
         <RightArrow className="right-arrow" onClick={nextSlide} />
