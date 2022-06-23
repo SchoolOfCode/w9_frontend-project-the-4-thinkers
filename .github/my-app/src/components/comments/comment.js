@@ -4,10 +4,10 @@ import "./comments.css"
 
 export default function Comment({text,handleDelete,cId}) {
   return (
-    <div className="comment">
+    <article className="comment">
         <div className="comment-author">Zainab</div>
         <p className="comment-content">{text}</p>
         <button className="comment-delete-button" onClick={function(e){handleDelete(e,cId)}}>Delete</button>
-    </div>
+    </article>
   );
 }
