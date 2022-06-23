@@ -14,18 +14,19 @@ export default function Menu() {
   //console.log("hello")
   const HandleChange = (event) => {
     console.log(event.target.value);
-    
+
     setSelected(event.target.value);
   };
- 
 
-  useEffect(()=>{
-
-    if(selected==="Week 1"){setIndexItems(0)}
-    else if(selected==="Week 2"){setIndexItems(1)}
-    else if(selected==="Week 3"){setIndexItems(2)}
-
-  },[selected])
+  useEffect(() => {
+    if (selected === "Week 1") {
+      setIndexItems(0);
+    } else if (selected === "Week 2") {
+      setIndexItems(1);
+    } else if (selected === "Week 3") {
+      setIndexItems(2);
+    }
+  }, [selected]);
   const navigate = useNavigate();
 
   const navigateToResources = (res) => {
@@ -38,7 +39,6 @@ export default function Menu() {
 
   return (
     <div>
-      <h1> School of Code </h1>
       <img
         src="https://d33wubrfki0l68.cloudfront.net/e6fddcbea146f91d2f3c160f7d56a9391a4740b0/4e758/static/logo-51c754388b198e5bbb0d08a971ebbfa2.png"
         alt="school of code logo"
@@ -56,11 +56,21 @@ export default function Menu() {
       <div className="button-group">
         <p className="btn">
           {/* {selected && menuItems[indexItems] */}
-          {menuItems[indexItems].days.map((item,index)=>{return(<button onClick={()=>{navigateToResources(item.day)}} key={index}>{item.day}</button>)})}
+          {menuItems[indexItems].days.map((item, index) => {
+            return (
+              <button
+                id="day_buttons"
+                onClick={() => {
+                  navigateToResources(item.day);
+                }}
+                key={index}
+              >
+                {item.day}
+              </button>
+            );
+          })}
         </p>
-        
       </div>
-
     </div>
   );
 }
