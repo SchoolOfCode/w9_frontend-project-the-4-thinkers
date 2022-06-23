@@ -1,12 +1,18 @@
 .summary-box {
-  margin: 0;
-  position: relative;
-  top: 50%;
+  margin: auto;
+  width: 50%;
+  border: 3px solid green;
+  padding: 10px;
   background-color: #A7DCC6;
   border-radius: 10px;
-  padding: 20px;
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-bottom: 20px;
-  margin-top: -50px;
+  
+}
+
+.title {
+  text-align: center;
+}
+
+.lists {
+  text-align: center;
+  border: 3px solid green;
 }

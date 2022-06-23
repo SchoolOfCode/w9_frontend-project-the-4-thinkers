@@ -64,7 +64,7 @@ export default function Resources() {
     }
         
     return (
-        <div>
+        <div className="body">
             <h1 className="resources-heading"> School of Code resources </h1>
             <BackToHomeButton/>
             <ImageSlider />

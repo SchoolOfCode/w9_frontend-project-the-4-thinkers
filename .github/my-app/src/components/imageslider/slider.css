@@ -6,32 +6,40 @@
 
 
 .slider {
-
-    position: relative;
-    height: 100vh;
-    display:flex;
-    align-items:center; 
+    display: flex;
     justify-content: center;
+    margin:auto;
+    width: 800px;
+    height: 500px;
+    margin-bottom: 70px;
 }
 
 .image {
-    height: 600px;
-    width: 1000px;
-    border-radius: 10px;
+   
+    margin: 0 auto;
+    padding: 3px;
+    width:800px;
+    height: 500px;
+    border-radius: 20px;
+   
+
 }
 
 .right-arrow {
     position: absolute;
+    margin-right: 100px;
     top:50%;
-    right: 120px;
-    font-size: 100px;
+    right: 50px;
+    font-size: 70px;
     color: #33A5DE;
 }
 
 .left-arrow {
     position: absolute;
+    margin-left: 100px;
     top:50%;
-    left: 120px;
-    font-size: 100px;
+    left: 50px;
+    font-size: 70px;
     color: #33A5DE;
 }
+

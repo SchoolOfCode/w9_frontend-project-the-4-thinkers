@@ -1,12 +1,13 @@
 import React from "react";
+import "./comments.css"
 //import { Dropdown } from "";
 
 export default function Comment({text,handleDelete,cId}) {
   return (
-    <div>
-        <h1>person1</h1>
-        <p>{text}</p>
-        <button onClick={function(e){handleDelete(e,cId)}}>Delete</button>
+    <div className="comment">
+        <div className="comment-author">person1</div>
+        <p className="comment-content">{text}</p>
+        <button className="comment-delete-button" onClick={function(e){handleDelete(e,cId)}}>Delete</button>
     </div>
   );
 }
