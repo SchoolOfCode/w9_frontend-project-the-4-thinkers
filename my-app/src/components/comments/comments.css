@@ -9,9 +9,10 @@
 
 
 .comments {
+    font-family: var(--main-font);
     margin: auto;
     width: 30%;
-    border: 3px solid #31A4DD;
+    background-color: var(--lightest-blue);
     border-radius: 20px;
     margin-bottom: 60px;
     margin-top: 60px;
@@ -19,38 +20,51 @@
   }
     
   .comments-title {
+    font-family: var(--main-font);
+    margin-top: 15px;
+    padding: 15px;
     text-align: center;
     font-size: 30px;
-    margin-bottom: 20px;
+    margin-bottom: 15px;
   }
 
   .comment-form-title {
+    font-family: var(--main-font);
     font-size: 22px;
     text-align: center;
     color: black;
     font-family: var(--main-font);
   }
   
+  .input-box{
+    background-color: white;
+    border: 1px solid black;
+    padding: 2px;
+  }
   .input-field {
+      font-family: var(--main-font);
       padding: 20px;
       text-align: center;
+      color:white;
   }
   .comments-container {
     margin: auto;
     width: 70%;
-    padding: 20px;
+    padding: 30px;
+    border-radius: 10px;
     background-color: var(--lightest-blue);
     margin-bottom: 50px;
     
   }
-  
-  
+
   .comment-form-button {
+    font-family: var(--main-font);
     font-size: 10px;
     padding: 4px 5px;
     background: rgb(59, 130, 246);
     border-radius: 5px;
     color: white;
+    margin-left: 5px;
   }
   
   .comment-form-button:hover:enabled {
@@ -59,22 +73,24 @@
   }
   
   .comment-delete-button {
+    position: absolute;
     margin-top: 15px;
     margin-bottom: 15px;
-    margin-left: 30px;
+    margin-left: 60%;
     font-size: 10px;
     padding: 4px 5px;
-    background: rgb(59, 130, 246);
+    background: rgb(226, 97, 91);
     border-radius: 5px;
     color: white;
   }
 
   .comment-delete-button:hover:enabled {
     cursor: pointer;
-    background: red;
+    background: rgb(145, 7, 7);
   }
   
   .comment {
+    padding: 20px;
     display: flex;
     margin-bottom: 30px;
     background-color: var(--lighter-blue);
@@ -86,7 +102,7 @@
     display: flex;
     color: black;
     margin-top: 30px;
-    background-color: #6FB6DA;
+    border: 0.5px solid var(--lighter-blue);
     font-family: var(--main-font);
   }
   
@@ -97,12 +113,13 @@
     font-size: 15px;
     color: black;
     font-family: var(--main-font);
+    text-decoration: underline;
   }
   
   .comment-text {
     font-size: 18px;
     margin-left: 20px;
-    background-color: #6FB6DA;
+    font-family: var(--main-font);
   }
   
 

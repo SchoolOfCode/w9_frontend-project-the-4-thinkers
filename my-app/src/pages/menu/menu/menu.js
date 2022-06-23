@@ -36,7 +36,7 @@ export default function Menu() {
   // console.log("yes",menuItems[indexItems].days[0]);
 
   return (
-    <div>
+    <div className="body">
       <img
         src="https://d33wubrfki0l68.cloudfront.net/e6fddcbea146f91d2f3c160f7d56a9391a4740b0/4e758/static/logo-51c754388b198e5bbb0d08a971ebbfa2.png"
         alt="school of code logo"
@@ -50,7 +50,6 @@ export default function Menu() {
             <option key={index}>{weeks.week}</option>
           ))}
         </select>
-      </div>
       <div className="button-group">
         <p className="btn">
           {/* {selected && menuItems[indexItems] */}
@@ -70,6 +69,7 @@ export default function Menu() {
         </p>
       </div>
     </div>
+      </div>
   );
 }
 

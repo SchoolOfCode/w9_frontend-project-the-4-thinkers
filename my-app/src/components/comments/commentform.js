@@ -22,10 +22,11 @@ export default function CommentForm({onSubmit}) {
             }}
         >
             <div className="comments">
-                <h3 className="comments-title">Comments</h3>
-                <div className="comment-form-title">Write comment</div>
+                <h3 className="comments-title">Discussion Section</h3>
+                <div className="comment-form-title">Discussion field :</div>
                 <div className="input-field">
                     <input 
+                        className="input-box"
                         value={commentFieldValue} 
                         onChange={changeCommentFieldValue}
                     >

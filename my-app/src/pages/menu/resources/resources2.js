@@ -12,7 +12,7 @@ import CommentForm from "../../../components/comments/commentform.js";
 import BackToHomeButton from "../../../components/backtomenu/backtohome.js"
 
   
-export default function Resources() {
+export default function Resources2() {
     const [dataQ, setDataQ] = useState("");
     const [dataE, setDataE] = useState("");
     const [commentListx, setCommentListx]=useState([]);
@@ -73,7 +73,7 @@ export default function Resources() {
              className="logo"
             />
             <BackToHomeButton></BackToHomeButton>
-             <h1 className="resources-heading"> Week 1 Day 1 Study Materials</h1>
+             <h1 className="resources-heading"> Week 2 Day 1 Study Materials</h1>
             <ImageSlider />
             <SummaryBox className="summary-box"/>
             <CheckBoxComponent />

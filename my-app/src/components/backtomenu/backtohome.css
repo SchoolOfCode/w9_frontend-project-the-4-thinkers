@@ -13,7 +13,8 @@
     font-size: 70px;
     margin: auto;
     width: 100%;
-    color: var(--lighter-blue);
+    color: #31A4DD;
+    margin-top: 35px;
 }
 
 .home-button-icon:hover, 

@@ -10,6 +10,10 @@ export default function SummaryBox() {
         <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
         <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
         <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
+        <li>Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</li>
       </p>
     </div>
   );
