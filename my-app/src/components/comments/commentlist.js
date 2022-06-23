@@ -8,7 +8,7 @@ export default function CommentList({commentListx,handleDelete}) {
         {commentListx.map(function(comment){
             console.log("map function called");
             return(
-                <Comment text={comment.comment_text} handleDelete={handleDelete} cId={comment.comments_id}/>
+                <Comment text={comment.comment_text} handleDelete={handleDelete} cId={comment.comments_id} aId = {comment.user_id}/>
             )
         })}
         </div>
