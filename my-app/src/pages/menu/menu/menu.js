@@ -1,15 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./menu.css";
-
-//import OptionList from "../components/Dropdown2/OptionList/OptionList.js";
 import { menuItems } from "../../../components/Weeksdata/Weeks";
-//import MenuItems from "../components/Dropdown2/MenuItems.js";
+
 export default function Menu() {
   const [selected, setSelected] = useState("");
   const [indexItems, setIndexItems] = useState(0);
-
-  //console.log("hello")
   const HandleChange = (event) => {
     console.log(event.target.value);
 
@@ -23,17 +19,16 @@ export default function Menu() {
       setIndexItems(1);
     } else if (selected === "Week 3") {
       setIndexItems(2);
-    }
+    } else if (selected === "Week 4") {
+      setIndexItems(3); }
+      else if (selected === "Week 5") {
+        setIndexItems(4);}
   }, [selected]);
   const navigate = useNavigate();
 
   const navigateToResources = (res) => {
-    // console.log(res);
     navigate(`/resources/${res}`);
   };
-
-  // console.log("no",indexItems)
-  // console.log("yes",menuItems[indexItems].days[0]);
 
   return (
     <div className="body">
@@ -50,26 +45,25 @@ export default function Menu() {
             <option key={index}>{weeks.week}</option>
           ))}
         </select>
-      <div className="button-group">
-        <p className="btn">
-          {/* {selected && menuItems[indexItems] */}
-          {menuItems[indexItems].days.map((item, index) => {
-            return (
-              <button
-                id="day_buttons"
-                onClick={() => {
-                  navigateToResources(item.day);
-                }}
-                key={index}
-              >
-                {item.day}
-              </button>
-            );
-          })}
-        </p>
+        <div className="button-group">
+          <p className="btn">
+            {menuItems[indexItems].days.map((item, index) => {
+              return (
+                <button
+                  id="day_buttons"
+                  onClick={() => {
+                    navigateToResources(item.day);
+                  }}
+                  key={index}
+                >
+                  {item.day}
+                </button>
+              );
+            })}
+          </p>
+        </div>
       </div>
     </div>
-      </div>
   );
 }
 
