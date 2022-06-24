@@ -6,10 +6,10 @@ import { menuItems } from "../../../components/Weeksdata/Weeks";
 export default function Menu() {
   const [selected, setSelected] = useState("");
   const [indexItems, setIndexItems] = useState(0);
+  
   const HandleChange = (event) => {
     console.log(event.target.value);
-
-    setSelected(event.target.value);
+  setSelected(event.target.value);
   };
 
   useEffect(() => {
@@ -24,11 +24,12 @@ export default function Menu() {
       else if (selected === "Week 5") {
         setIndexItems(4);}
   }, [selected]);
+  
   const navigate = useNavigate();
-
-  const navigateToResources = (res) => {
+    const navigateToResources = (res) => {
     navigate(`/resources/${res}`);
   };
+
 
   return (
     <div className="body">

@@ -12,8 +12,11 @@
   --main-color-blue: #31A4DD: ;
   --lighter-blue: #6FB6DA;
   --lightest-blue:#D5EFF7;
+  --background-color: #efeae5;
   --main-font:roboto Verdana, Geneva, Tahoma, sans-serif;
 }
+
+
 .body
 {
   background-color: #efeae5;
