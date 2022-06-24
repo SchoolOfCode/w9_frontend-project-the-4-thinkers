@@ -23,7 +23,7 @@ export default function CommentForm({onSubmit}) {
         >
             <div className="comments">
                 <h3 className="comments-title">Discussion Section</h3>
-                <div className="comment-form-title">Discussion field :</div>
+                <div className="comment-form-title">Add comment: </div>
                 <div className="input-field">
                     <input 
                         className="input-box"
