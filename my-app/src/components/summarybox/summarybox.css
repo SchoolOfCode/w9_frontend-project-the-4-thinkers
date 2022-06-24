@@ -19,6 +19,7 @@
 .title {
   padding: 15px;
   font-family: var(--main-font);
+  font-size: 18px;
 }
 
 .lists {
