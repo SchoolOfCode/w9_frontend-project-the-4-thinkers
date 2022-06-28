@@ -12,11 +12,11 @@ export default function ImageSlider() {
   const length = SliderData.length;
 
  
-  const nextSlide = () => {
+  function nextSlide() {
     setCurrent(current === length - 1 ? 0 : current + 1);
   };
 
-    const prevSlide = () => {
+   function prevSlide() {
     setCurrent(current === 0 ? length - 1 : current - 1);
   };
   

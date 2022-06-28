@@ -5,9 +5,11 @@ import "./checkbox.css"
 function CheckBoxComponent() {
   
   const [checked, setChecked] = useState(false);
+  
   const onChange = () => {
     setChecked(!checked);
   };
+  
   return (
     <div >
       <Checkbox className="checkbox-ticker"

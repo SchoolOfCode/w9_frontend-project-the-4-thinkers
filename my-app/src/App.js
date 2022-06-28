@@ -12,7 +12,6 @@ function App() {
   return (
   <div >
   <Routes>
-  
    <Route exact path="/" element={<Menu />} /> 
    <Route exact path="/resources/W1D1" element={<Resources />} /> 
    <Route exact path="/resources/W2D1" element={<Resources2 />} /> 
