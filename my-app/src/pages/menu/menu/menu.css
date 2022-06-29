@@ -13,7 +13,7 @@
   --lighter-blue: #6FB6DA;
   --lightest-blue:#D5EFF7;
   --background-color: #efeae5;
-  --main-font:roboto Verdana, Geneva, Tahoma, sans-serif;
+  --main-font: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
   --padding: 30px;
 }
 
@@ -27,7 +27,7 @@
 
 h2 {
   text-align: center;
-  font-family: var(--main-font);
+  font-family: "Roboto";
   font-size: 2em;
   padding: 20px;
 }

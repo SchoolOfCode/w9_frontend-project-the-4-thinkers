@@ -12,7 +12,7 @@
     --main-color-blue: #31A4DD: ;
     --lighter-blue: #6FB6DA;
     --lightest-blue:#D5EFF7;
-    --main-font:roboto Verdana, Geneva, Tahoma, sans-serif;
+    --main-font: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
     --padding-elements: 20px;
   }
 
@@ -20,6 +20,7 @@
 
 .comments {
     font-family: var(--main-font);
+    font-family: "Roboto";
     margin: auto;
     width: 30%;
     background-color: var(--lighter-blue);
@@ -31,6 +32,7 @@
     
   .comments-title {
     font-family: var(--main-font);
+    font-family: "Roboto";
     margin-top: 15px;
     padding: 15px;
     text-align: center;
@@ -40,6 +42,7 @@
 
   .comment-form-title {
     font-family: var(--main-font);
+    font-family: "Roboto";
     font-size: 18px;
     text-align: center;
     color: black;
@@ -53,6 +56,7 @@
   }
   .input-field {
       font-family: var(--main-font);
+      font-family: "Roboto";
       padding: 20px;
       text-align: center;
       color:white;
@@ -69,6 +73,7 @@
 
   .comment-form-button {
     font-family: var(--main-font);
+    font-family: "Roboto";
     font-size: 15px;
     padding: 4px 5px;
     background: #31A4DD;
@@ -126,6 +131,7 @@
     font-size: 15px;
     color: black;
     font-family: var(--main-font);
+    font-family: "Roboto";
     text-decoration: underline;
   }
   
@@ -133,6 +139,7 @@
     font-size: 18px;
     margin-left: 20px;
     font-family: var(--main-font);
+    font-family: "Roboto";
   }
   
 
