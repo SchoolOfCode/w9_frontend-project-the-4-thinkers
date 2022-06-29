@@ -78,11 +78,11 @@ A next Slide and Previous Slide function was then set up. Here we used the terna
 
 ```javascript
 function nextSlide() {
-  setCurrent(current === length - 1 ? 0 : current + 1);
+    setCurrent(current === length - 1 ? 0 : current + 1);
 }
 
 function prevSlide() {
-  setCurrent(current === 0 ? length - 1 : current - 1);
+    setCurrent(current === 0 ? length - 1 : current - 1);
 }
 ```
 
@@ -129,9 +129,9 @@ To create our dropdown menu we mapped through menu items and got each week
 
 ```javascript
 <select className="select-button" onChange={HandleChange}>
-  {menuItems.map((weeks, index) => (
-    <option key={index}>{weeks.week}</option>
-  ))}
+    {menuItems.map((weeks, index) => (
+        <option key={index}>{weeks.week}</option>
+    ))}
 </select>
 ```
 
@@ -177,21 +177,21 @@ Within the CommentList component the return maps through the array of comments a
 
 ```javascript
 export default function CommentList({ commentListx, handleDelete }) {
-  return (
-    <div className="comments-container">
-      {commentListx.map(function (comment) {
-        console.log("map function called");
-        return (
-          <Comment
-            text={comment.comment_text}
-            handleDelete={handleDelete}
-            cId={comment.comments_id}
-            aId={comment.user_id}
-          />
-        );
-      })}
-    </div>
-  );
+    return (
+        <div className="comments-container">
+            {commentListx.map(function (comment) {
+                console.log("map function called");
+                return (
+                    <Comment
+                        text={comment.comment_text}
+                        handleDelete={handleDelete}
+                        cId={comment.comments_id}
+                        aId={comment.user_id}
+                    />
+                );
+            })}
+        </div>
+    );
 }
 ```
 
@@ -221,20 +221,19 @@ The comment component is passed down the author ID (aId) and text props to be re
 
 ```javascript
 export default function Comment({ text, handleDelete, cId, aId }) {
-  return (
-    <article className="comment">
-      <div className="comment-author">author:{aId}</div>
-      <p className="comment-content">{text}</p>
-      <button
-        className="comment-delete-button"
-        onClick={function (e) {
-          handleDelete(e, cId);
-        }}
-      >
-        Delete
-      </button>
-    </article>
-  );
+    return (
+        <article className="comment">
+            <div className="comment-author">author:{aId}</div>
+            <p className="comment-content">{text}</p>
+            <button
+                className="comment-delete-button"
+                onClick={function (e) {
+                    handleDelete(e, cId);
+                }}>
+                Delete
+            </button>
+        </article>
+    );
 }
 ```
 
@@ -251,9 +250,9 @@ The components for the resource page were all created in seperate component file
 
 ```js
 <Routes>
-  <Route exact path="/" element={<Menu />} />
-  <Route exact path="/resources/W1D1" element={<Resources />} />
-  <Route exact path="/resources/W2D1" element={<Resources2 />} />
+    <Route exact path="/" element={<Menu />} />
+    <Route exact path="/resources/W1D1" element={<Resources />} />
+    <Route exact path="/resources/W2D1" element={<Resources2 />} />
 </Routes>
 ```
 
@@ -278,29 +277,39 @@ describe("Comment form functionality", function(){
     });
 ```
 
-And tests to ensure that the comments were rendered successfully and that the text content of the comments mtched the value of the text prop that it was handed.
+And tests to ensure that the comments were rendered successfully, that the text content of the comments matched the value of the text prop that it was handed and a test to ensure the delete button called the relevant delete function.
 
 ```js
 describe("Comment functionality", function () {
-  test("When Comment component is rendered, given the props text (string), cId (number) & handleDelete (funtion), then a comment is rendered", function () {
-    const handleDelete = jest.fn();
-    const text = "Test Comment";
-    const cId = 1;
-    const aId = 3;
-    render(
-      <Comment text={text} handleDelete={handleDelete} cId={cId} aId={aId} />
-    );
-    expect(screen.getByRole("article")).toBeInTheDocument();
-  });
-  test("Text content of comment should be the value of Text prop", function () {
-    const handleDelete = jest.fn();
-    const text = "Test Comment";
-    const cId = 1;
-    const aId = 3;
-    render(
-      <Comment text={text} handleDelete={handleDelete} cId={cId} aId={aId} />
-    );
-    expect(screen.getByRole("button")).toHaveTextContent("Delete");
-  });
+    test("When Comment component is rendered, given the props text (string), cId (number) & handleDelete (funtion), then a comment is rendered", function () {
+        const handleDelete = jest.fn();
+        const text = "Test Comment";
+        const cId = 1;
+        const aId = 3;
+        render(
+            <Comment
+                text={text}
+                handleDelete={handleDelete}
+                cId={cId}
+                aId={aId}
+            />
+        );
+        expect(screen.getByRole("article")).toBeInTheDocument();
+    });
+    test("Text content of comment should be the value of Text prop", function () {
+        const handleDelete = jest.fn();
+        const text = "Test Comment";
+        const cId = 1;
+        const aId = 3;
+        render(
+            <Comment
+                text={text}
+                handleDelete={handleDelete}
+                cId={cId}
+                aId={aId}
+            />
+        );
+        expect(screen.getByText(text)).toBeInTheDocument();
+    });
 });
 ```

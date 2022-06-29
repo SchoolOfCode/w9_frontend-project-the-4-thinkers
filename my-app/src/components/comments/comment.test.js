@@ -35,4 +35,10 @@ describe("Comment functionality", function () {
         );
         expect(screen.getByText(text)).toBeInTheDocument();
     });
+    test("When button is clicked, the handle delete function is called.", function () {
+        const handleDelete = jest.fn();
+        render(<Comment handleDelete={handleDelete} />);
+        userEvent.click(screen.getByRole("button"));
+        expect(handleDelete).toHaveBeenCalled();
+    });
 });
