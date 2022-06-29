@@ -33,6 +33,6 @@ describe("Comment functionality", function () {
                 aId={aId}
             />
         );
-        expect(screen.getByRole("button")).toHaveTextContent("Delete");
+        expect(screen.getByText(text)).toBeInTheDocument();
     });
 });

@@ -20,18 +20,22 @@ describe("Comment form functionality", function () {
         render(<CommentForm onSubmit={handleSubmit} />);
         expect(screen.getByRole("button")).toHaveValue("Submit");
     });
+    test("When typing in the input field, the input field displays that text", function () {
+        const onSubmit = jest.fn();
+        let textStr = "This is a comment";
+        render(<CommentForm onSubmit={onSubmit} />);
+        // screen.debug();
+        userEvent.click(screen.getByRole("textbox"));
+        userEvent.type(screen.getByRole("textbox"), textStr);
+        expect(screen.getByRole("textbox")).toHaveValue(textStr);
+    });
     test("When the submit button is clicked, the handleSubmit function is called", function () {
         const onSubmit = jest.fn();
+        let textStr = "This is a comment";
         render(<CommentForm onSubmit={onSubmit} />);
+        userEvent.click(screen.getByRole("textbox"));
+        userEvent.type(screen.getByRole("textbox"), textStr);
         userEvent.click(screen.getByRole("button"));
         expect(onSubmit).toHaveBeenCalled();
     });
-    /*     test("When typing in the input field, the input field displays that text", function(){
-        const onSubmit = jest.fn();
-        render (<CommentForm onSubmit={onSubmit} />);
-        screen.debug()
-        userEvent.click(screen.getByRole("textbox"))
-        userEvent.type(screen.getByRole("textbox"),"This is a comment");
-        expect(screen.getByRole("textbox")).toHaveTextContent("This is a comment");
-    }); */
 });
