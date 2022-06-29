@@ -20,12 +20,12 @@ describe("Comment form functionality", function () {
         render(<CommentForm onSubmit={handleSubmit} />);
         expect(screen.getByRole("button")).toHaveValue("Submit");
     });
-    // test("When the submit button is clicked, the handleSubmit function is called", function(){
-    //     const onSubmit = jest.fn();
-    //     render (<CommentForm onSubmit={onSubmit} />);
-    //     userEvent.click(screen.getByRole("button"));
-    //     expect(onSubmit).toHaveBeenCalled();
-    // });
+    test("When the submit button is clicked, the handleSubmit function is called", function () {
+        const onSubmit = jest.fn();
+        render(<CommentForm onSubmit={onSubmit} />);
+        userEvent.click(screen.getByRole("button"));
+        expect(onSubmit).toHaveBeenCalled();
+    });
     /*     test("When typing in the input field, the input field displays that text", function(){
         const onSubmit = jest.fn();
         render (<CommentForm onSubmit={onSubmit} />);
