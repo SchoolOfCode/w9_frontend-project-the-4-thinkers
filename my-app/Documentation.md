@@ -46,11 +46,14 @@ Start the server
   npm start
 ```
 
-<br> 
+<br>
 
--------------
+---
+
 ## CSS Styling
----------------
+
+---
+
 | Color         | Hex                                                              |
 | ------------- | ---------------------------------------------------------------- |
 | Primary Blue  | ![#31a4dd](https://via.placeholder.com/10/31A4DD?text=+) #31a4dd |
@@ -58,43 +61,45 @@ Start the server
 | Lightest Blue | ![#D5EFF7](https://via.placeholder.com/10/D5EFF7?text=+) #d5eff7 |
 | Background    | ![#efeae5](https://via.placeholder.com/10/efeae5?text=+) #efeae5 |
 
-| Font | <span style="font-family:Roboto;">Roboto</span> |
+<br>
+<br>
 
------------
+---
+
 # Components
 
 ## Image Slider
--------------------------------------------
-We used an image slider component which worked by _mapping_ through an array of image data and then we used _UseState_ to set the current image. 
+
+---
+
+We used an image slider component which worked by _mapping_ through an array of image data and then we used _UseState_ to set the current image.
 
 A next Slide and Previous Slide function was then set up. Here we used the ternary operator to _setCurrent_ slide to the next/ previous slide.
 
-
 ```javascript
+function nextSlide() {
+  setCurrent(current === length - 1 ? 0 : current + 1);
+}
 
-    function nextSlide() {
-    setCurrent(current === length - 1 ? 0 : current + 1);
-    };
-
-   function prevSlide() {
-    setCurrent(current === 0 ? length - 1 : current - 1);
-     };
-
+function prevSlide() {
+  setCurrent(current === 0 ? length - 1 : current - 1);
+}
 ```
 
-Additionally we imported react icons from the **react icons library** 
-
+Additionally we imported react icons from the **react icons library**
 
 [React-icons](https://react-icons.github.io/react-icons/)
 
---------------------------------
+<br>
+<br>
 
+---
 
-## Drop-down menu  (within the menu page)
+## Drop-down menu (within the menu page)
 
---------------------------
+---
 
-We created a drop down menu to go into a our data which contained a sub-array. 
+We created a drop down menu to go into a our data which contained a sub-array.
 
 ```javascript
 export const menuItems = [
@@ -124,11 +129,10 @@ To create our dropdown menu we mapped through menu items and got each week
 
 ```javascript
 <select className="select-button" onChange={HandleChange}>
-          {menuItems.map((weeks, index) => (
-            <option key={index}>{weeks.week}</option>
-          ))}
-        </select>
-
+  {menuItems.map((weeks, index) => (
+    <option key={index}>{weeks.week}</option>
+  ))}
+</select>
 ```
 
 We then mapped through the menu for each index item and got each day which then navigated to the corresponding page.
@@ -148,14 +152,27 @@ We then mapped through the menu for each index item and got each day which then 
                 </button>
 
 ```
----------------------------------------------
-## Checkbox Component 
--------------------------------------------
+
+<br>
+<br>
+
+---
+
+## Checkbox Component
+
+---
+
 We used a checkbox component which worked having use State to setChecked to either true/ false. This would be helpful later on to us if we were able to create a login page and store the data.
 
--------------
+<br>
+<br>
+
+---
+
 ## CommentList
---------------------
+
+---
+
 Within the CommentList component the return maps through the array of comments and passes down the content, the author and comment IDs.
 
 ```javascript
@@ -177,18 +194,30 @@ export default function CommentList({ commentListx, handleDelete }) {
   );
 }
 ```
-----------------------------
+
+---
+
+<br>
+<br>
 
 ## CommentForm
-------------------------------
+
+---
+
 Within the CommentForm component there is an input field and a Submit button which when clicked takes the user’s input and sets the state to the value of this input.
 
-The CommentForm component runs a handleSubmit function when a user enters text into the input field and clicks the submit button. This creates a POST request to the database with the content of the user's text. On every render of the page, the CommentList component is causing a GET request which fetches all comments in the database and renders them on the page.
+The CommentForm component runs a handleSubmit function when a user enters text into the input field and clicks the submit button. This creates a POST request to the database with the content of the user's text and also triggers a re-render of the page, which fetches all comments in the database and renders them on the page.
 
--------------------
+---
+
+<br>
+<br>
+
 ## Comment
--------------------------
-The comment component passes down the author ID (aId) and text props to be rendered in the CommentList component and gives the handleDelete function the comment ID (cId) when the delete button is clicked.
+
+---
+
+The comment component is passed down the author ID (aId) and text props to be rendered in the CommentList component and gives the handleDelete function the comment ID (cId) when the delete button is clicked.
 
 ```javascript
 export default function Comment({ text, handleDelete, cId, aId }) {
@@ -209,21 +238,34 @@ export default function Comment({ text, handleDelete, cId, aId }) {
 }
 ```
 
------------------
-## Pages
--------------------
-The components for the resource page were all created in seperate component files and then rendered onto the corresponding pages. Within our **App.js** file we then had our different routes that all corresponded to a specific URL. 
+<br>
+<br>
 
-```javascript
-  <Routes>
-   <Route exact path="/" element={<Menu />} /> 
-   <Route exact path="/resources/W1D1" element={<Resources />} /> 
-   <Route exact path="/resources/W2D1" element={<Resources2 />} /> 
-   </Routes>
+---
+
+## Pages
+
+---
+
+The components for the resource page were all created in seperate component files and then rendered onto the corresponding pages. Within our **App.js** file we then had our different routes that all corresponded to a specific URL.
+
+```js
+<Routes>
+  <Route exact path="/" element={<Menu />} />
+  <Route exact path="/resources/W1D1" element={<Resources />} />
+  <Route exact path="/resources/W2D1" element={<Resources2 />} />
+</Routes>
 ```
--------------------
+
+<br>
+<br>
+
+---
+
 ## Testing
--------------------
+
+---
+
 For testing we used the React Testing Library. Our tests included one to ensure that comment form was successfully rendered on the page as per below:
 
 ```js
@@ -262,4 +304,3 @@ describe("Comment functionality", function () {
   });
 });
 ```
-
