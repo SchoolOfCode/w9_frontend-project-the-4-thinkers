@@ -1,0 +1,32 @@
+:root {
+  --main-color-blue: #31A4DD: ;
+  --lighter-blue: #6FB6DA;
+  --lightest-blue:#D5EFF7;
+  --main-font: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+.summary-box {
+  margin: auto;
+  width: 70%;
+  padding: 20px;
+  background-color: var(--lighter-blue);
+  border-radius: 10px;
+  margin-bottom: 20px;
+  
+}
+
+.title {
+  padding: 15px;
+  font-family: var(--main-font);
+  font-family: "Roboto";
+  font-size: 18px;
+}
+
+.lists {
+  padding: 15px;
+  background-color: var(--lightest-blue);
+  border-radius: 10px;
+  font-family: var(--main-font);
+  font-family: "Roboto";
+}

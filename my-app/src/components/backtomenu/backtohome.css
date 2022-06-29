@@ -1,0 +1,23 @@
+
+:root {
+    --main-color-blue: #31A4DD: ;
+    --lighter-blue: #6FB6DA;
+    --lightest-blue:#D5EFF7;
+    --main-font: "Roboto" Verdana, Geneva, Tahoma, sans-serif;
+    --padding-elements: 20px;
+  }
+
+
+
+.home-button-icon{
+    font-size: 70px;
+    margin: auto;
+    width: 100%;
+    color: #31A4DD;
+    margin-top: 35px;
+}
+
+.home-button-icon:hover, 
+.home-button-icon:focus {
+    color: lightblue;
+}

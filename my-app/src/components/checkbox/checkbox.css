@@ -1,0 +1,28 @@
+:root {
+    --main-color-blue: #31A4DD: ;
+    --lighter-blue: #6FB6DA;
+    --lightest-blue:#D5EFF7;
+    --main-font: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+    --padding-elements: 20px;
+  }
+
+
+
+
+.checkbox-ticker {
+  font-size: 20px;
+  background-color: #6FB6DA;
+  color: black;
+    text-align: center;
+    margin: auto;
+    width: 20%;
+    padding: 15px 15px 15px 15px;
+    font-family: var( --main-font);
+    font-family: "Roboto";
+    font-size: 20px;
+    border-radius: 15px;
+}
+
+.label {
+  padding: 5px;
+}

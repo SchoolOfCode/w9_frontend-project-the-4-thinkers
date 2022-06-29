@@ -1,0 +1,145 @@
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: transparent;
+}
+
+:root {
+    --main-color-blue: #31A4DD: ;
+    --lighter-blue: #6FB6DA;
+    --lightest-blue:#D5EFF7;
+    --main-font: "Roboto", Verdana, Geneva, Tahoma, sans-serif;
+    --padding-elements: 20px;
+  }
+
+
+
+.comments {
+    font-family: var(--main-font);
+    font-family: "Roboto";
+    margin: auto;
+    width: 30%;
+    background-color: var(--lighter-blue);
+    border-radius: 20px;
+    margin-bottom: 60px;
+    margin-top: 60px;
+    padding: 0px;  
+  }
+    
+  .comments-title {
+    font-family: var(--main-font);
+    font-family: "Roboto";
+    margin-top: 15px;
+    padding: 15px;
+    text-align: center;
+    font-size: 30px;
+    margin-bottom: 15px;
+  }
+
+  .comment-form-title {
+    font-family: var(--main-font);
+    font-family: "Roboto";
+    font-size: 18px;
+    text-align: center;
+    color: black;
+    font-family: var(--main-font);
+  }
+  
+  .input-box{
+    background-color: white;
+    border: 1px solid black;
+    padding: 5px;
+  }
+  .input-field {
+      font-family: var(--main-font);
+      font-family: "Roboto";
+      padding: 20px;
+      text-align: center;
+      color:white;
+  }
+  .comments-container {
+    margin: auto;
+    width: 70%;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #31A4DD;
+    margin-bottom: 50px;
+    
+  }
+
+  .comment-form-button {
+    font-family: var(--main-font);
+    font-family: "Roboto";
+    font-size: 15px;
+    padding: 4px 5px;
+    background: #31A4DD;
+    border-radius: 5px;
+    color: white;
+    margin-left: 5px;
+  }
+  
+  .comment-form-button:hover:enabled {
+    cursor: pointer;
+    background: #6FB6DA;
+  }
+  
+  .comment-delete-button {
+    position: absolute;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    margin-left: 60%;
+    font-size: 15px;
+    padding: 4px 5px;
+    background: rgb(226, 97, 91);
+    border-radius: 5px;
+    color: white;
+  }
+
+  .comment-delete-button:hover:enabled {
+    cursor: pointer;
+    background: rgb(145, 7, 7);
+  }
+  
+  .comment {
+    padding: 20px;
+    display: flex;
+    margin-bottom: 40px;
+    border-radius: 10px;
+    background-color: var(--lightest-blue);
+  }
+  
+  
+  
+  .comment-content {
+    display: flex;
+    color: black;
+    margin-top: 40px;
+    margin-bottom: 20px;
+    margin-left: -78px ;
+    margin-right: 90px;
+    font-family: var(--main-font);
+  }
+  
+  .comment-author {
+    margin-top: 10px;
+    margin-right: 15px;
+    margin-left: 10px;
+    font-size: 15px;
+    color: black;
+    font-family: var(--main-font);
+    font-family: "Roboto";
+    text-decoration: underline;
+  }
+  
+  .comment-text {
+    font-size: 18px;
+    margin-left: 20px;
+    font-family: var(--main-font);
+    font-family: "Roboto";
+  }
+  
+
